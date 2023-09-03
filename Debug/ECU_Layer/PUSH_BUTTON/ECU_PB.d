@@ -1,0 +1,16 @@
+ECU_Layer/PUSH_BUTTON/ECU_PB.o ECU_Layer/PUSH_BUTTON/ECU_PB.o:  \
+ ../ECU_Layer/PUSH_BUTTON/ECU_PB.c ../ECU_Layer/PUSH_BUTTON/ECU_PB.h \
+  ../ECU_Layer/PUSH_BUTTON/../../MCAL_Layer/01-GPIO/MCAL_GPIO.h \
+  ../ECU_Layer/PUSH_BUTTON/../../MCAL_Layer/01-GPIO/MCAL_STD_TYPES.h \
+  ../ECU_Layer/PUSH_BUTTON/../../MCAL_Layer/01-GPIO/MCAL_GPIO_Private.h \
+  ../ECU_Layer/PUSH_BUTTON/ECU_PB_cfg.h
+
+../ECU_Layer/PUSH_BUTTON/ECU_PB.h:
+
+../ECU_Layer/PUSH_BUTTON/../../MCAL_Layer/01-GPIO/MCAL_GPIO.h:
+
+../ECU_Layer/PUSH_BUTTON/../../MCAL_Layer/01-GPIO/MCAL_STD_TYPES.h:
+
+../ECU_Layer/PUSH_BUTTON/../../MCAL_Layer/01-GPIO/MCAL_GPIO_Private.h:
+
+../ECU_Layer/PUSH_BUTTON/ECU_PB_cfg.h:
