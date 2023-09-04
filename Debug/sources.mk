@@ -23,5 +23,6 @@ SUBDIRS := \
 . \
 ECU_Layer/LED \
 ECU_Layer/PUSH_BUTTON \
+ECU_Layer/RELAY \
 MCAL_Layer/01-GPIO \
 
