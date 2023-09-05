@@ -12,6 +12,7 @@ RM := rm -rf
 -include ECU_Layer/RELAY/subdir.mk
 -include ECU_Layer/PUSH_BUTTON/subdir.mk
 -include ECU_Layer/LED/subdir.mk
+-include ECU_Layer/ECU_SEVEN_SEG/subdir.mk
 -include ECU_Layer/DC_Motor/subdir.mk
 -include subdir.mk
 -include objects.mk

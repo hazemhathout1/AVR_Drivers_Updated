@@ -22,6 +22,7 @@ C_DEPS :=
 SUBDIRS := \
 . \
 ECU_Layer/DC_Motor \
+ECU_Layer/ECU_SEVEN_SEG \
 ECU_Layer/LED \
 ECU_Layer/PUSH_BUTTON \
 ECU_Layer/RELAY \
