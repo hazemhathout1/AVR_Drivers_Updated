@@ -21,6 +21,7 @@ C_DEPS :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 . \
+ECU_Layer/DC_Motor \
 ECU_Layer/LED \
 ECU_Layer/PUSH_BUTTON \
 ECU_Layer/RELAY \

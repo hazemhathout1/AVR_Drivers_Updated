@@ -10,6 +10,7 @@
 #include "ECU_Layer/LED/ECU_LED.h"
 #include "ECU_Layer/PUSH_BUTTON/ECU_PB.h"
 #include "ECU_Layer/RELAY/ECU_RELAY.h"
+#include "ECU_Layer/DC_Motor/ECU_DC_Motor.h"
 #include <util/delay.h>
 void Application_initialize();
 
