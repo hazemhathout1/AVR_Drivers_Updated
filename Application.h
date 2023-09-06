@@ -7,12 +7,11 @@
 
 #ifndef APPLICATION_H_
 #define APPLICATION_H_
-#include "ECU_Layer/LED/ECU_LED.h"
-#include "ECU_Layer/PUSH_BUTTON/ECU_PB.h"
-#include "ECU_Layer/RELAY/ECU_RELAY.h"
-#include "ECU_Layer/DC_Motor/ECU_DC_Motor.h"
-#include "ECU_Layer/ECU_SEVEN_SEG/ECU_SEVEN_SEG.h"
-#include <util/delay.h>
+#include "ECU_Layer/ECU_LAYER_INIT.h"
+
+
+extern keypad_t keypad1;
+extern led_t led1;
 void Application_initialize();
 
 

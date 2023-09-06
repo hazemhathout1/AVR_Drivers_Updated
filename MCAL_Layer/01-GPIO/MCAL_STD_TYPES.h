@@ -52,6 +52,7 @@ typedef uint8 STD_ReturnStatus;//Return type of any function from now on, it may
 #define PORT_OUTPUT    		0xFF
 #define PORT_INPUT     		0x00
 
+#define ZERO_INIT			0
 
 
 /* Section : User type Declarations */

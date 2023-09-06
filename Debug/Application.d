@@ -1,5 +1,5 @@
 Application.o Application.o: ../Application.c ../Application.h \
-  ../ECU_Layer/LED/ECU_LED.h \
+  ../ECU_Layer/ECU_LAYER_INIT.h ../ECU_Layer/LED/ECU_LED.h \
   ../ECU_Layer/LED/../../MCAL_Layer/01-GPIO/MCAL_GPIO.h \
   ../ECU_Layer/LED/../../MCAL_Layer/01-GPIO/MCAL_STD_TYPES.h \
   ../ECU_Layer/LED/../../MCAL_Layer/01-GPIO/MCAL_GPIO_Private.h \
@@ -11,9 +11,13 @@ Application.o Application.o: ../Application.c ../Application.h \
   ../ECU_Layer/DC_Motor/../../MCAL_Layer/01-GPIO/MCAL_GPIO.h \
   ../ECU_Layer/ECU_SEVEN_SEG/ECU_SEVEN_SEG.h \
   ../ECU_Layer/ECU_SEVEN_SEG/../../MCAL_Layer/01-GPIO/MCAL_GPIO.h \
-  ../ECU_Layer/ECU_SEVEN_SEG/ECU_SEVEN_SEG_CNFG.h
+  ../ECU_Layer/ECU_SEVEN_SEG/ECU_SEVEN_SEG_CNFG.h \
+  ../ECU_Layer/KEYPAD/ECU_KEYPAD.h \
+  ../ECU_Layer/KEYPAD/../../MCAL_Layer/01-GPIO/MCAL_GPIO.h
 
 ../Application.h:
+
+../ECU_Layer/ECU_LAYER_INIT.h:
 
 ../ECU_Layer/LED/ECU_LED.h:
 
@@ -46,3 +50,7 @@ Application.o Application.o: ../Application.c ../Application.h \
 ../ECU_Layer/ECU_SEVEN_SEG/../../MCAL_Layer/01-GPIO/MCAL_GPIO.h:
 
 ../ECU_Layer/ECU_SEVEN_SEG/ECU_SEVEN_SEG_CNFG.h:
+
+../ECU_Layer/KEYPAD/ECU_KEYPAD.h:
+
+../ECU_Layer/KEYPAD/../../MCAL_Layer/01-GPIO/MCAL_GPIO.h:
