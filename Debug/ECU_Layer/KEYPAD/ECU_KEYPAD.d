@@ -1,0 +1,13 @@
+ECU_Layer/KEYPAD/ECU_KEYPAD.o ECU_Layer/KEYPAD/ECU_KEYPAD.o:  \
+ ../ECU_Layer/KEYPAD/ECU_KEYPAD.c ../ECU_Layer/KEYPAD/ECU_KEYPAD.h \
+  ../ECU_Layer/KEYPAD/../../MCAL_Layer/01-GPIO/MCAL_GPIO.h \
+  ../ECU_Layer/KEYPAD/../../MCAL_Layer/01-GPIO/MCAL_STD_TYPES.h \
+  ../ECU_Layer/KEYPAD/../../MCAL_Layer/01-GPIO/MCAL_GPIO_Private.h
+
+../ECU_Layer/KEYPAD/ECU_KEYPAD.h:
+
+../ECU_Layer/KEYPAD/../../MCAL_Layer/01-GPIO/MCAL_GPIO.h:
+
+../ECU_Layer/KEYPAD/../../MCAL_Layer/01-GPIO/MCAL_STD_TYPES.h:
+
+../ECU_Layer/KEYPAD/../../MCAL_Layer/01-GPIO/MCAL_GPIO_Private.h:
