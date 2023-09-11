@@ -14,9 +14,10 @@
 #include "DC_Motor/ECU_DC_Motor.h"
 #include "ECU_SEVEN_SEG/ECU_SEVEN_SEG.h"
 #include "KEYPAD/ECU_KEYPAD.h"
+#include "LCD/ECU_CHR_LCD.h"
 #include <util/delay.h>
 
-
+void welcome_message();
 void ecu_layer_initialize();
 
 #endif /* ECU_LAYER_ECU_LAYER_INIT_H_ */

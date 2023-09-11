@@ -14,6 +14,9 @@
 /*------------------------MACRO Declarations----------------*/
 #define ECU_KEYPAD_ROWS		4
 #define ECU_KEYPAD_COLUMNS	4
+
+#define KEY_PRESSED			0x01
+#define KEY_NOT_PRESSED		0x00
 /*------------------------MACRO functions Declarations------------------*/
 
 
@@ -25,7 +28,7 @@ typedef struct{
 
 /*-----------------------------Software Interfaces Declarations-----------------------*/
 STD_ReturnStatus keypad_initialize(const keypad_t *_keypad_obj);
-STD_ReturnStatus keypad_get_value(const keypad_t *_keypad_obj,uint8 *value);
+STD_ReturnStatus keypad_get_value(const keypad_t *_keypad_obj,uint8 *value,uint8 *Key_pressed);
 
 
 #endif /* ECU_LAYER_KEYPAD_ECU_KEYPAD_H_ */

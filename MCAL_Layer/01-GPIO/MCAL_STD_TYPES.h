@@ -11,7 +11,7 @@
 
 
 /* Section : Includes */
-
+#include "string.h"
 
 
 /* Section : Macro Function Declarations */

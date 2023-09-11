@@ -12,6 +12,8 @@
 
 extern keypad_t keypad1;
 extern led_t led1;
+extern chr_lcd_4bit_t lcd1;
+extern chr_lcd_8bit_t lcd2;
 void Application_initialize();
 
 

@@ -12,6 +12,7 @@
 #include <stddef.h>
 #include "MCAL_STD_TYPES.h"
 #include "MCAL_GPIO_Private.h"
+#include "util/delay.h"
 
 
 /* Section : Macro Declarations*/

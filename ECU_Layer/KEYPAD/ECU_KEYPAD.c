@@ -13,6 +13,14 @@ static const uint8 btn_values[ECU_KEYPAD_ROWS][ECU_KEYPAD_COLUMNS]={
 		{'#','0','=','+'},
 };
 
+static const uint8 btn_values_int[ECU_KEYPAD_ROWS][ECU_KEYPAD_COLUMNS]={
+		{7,8,9,'/'},
+		{4,5,6,'*'},
+		{1,2,3,'-'},
+		{'#',0,'=','+'},
+};
+
+
 
 /***
  *
@@ -49,9 +57,10 @@ STD_ReturnStatus keypad_initialize(const keypad_t *_keypad_obj)
  * @param value
  * @return
  */
-STD_ReturnStatus keypad_get_value(const keypad_t *_keypad_obj,uint8 *value)
+STD_ReturnStatus keypad_get_value(const keypad_t *_keypad_obj,uint8 *value,uint8 *Key_pressed)
 {
-	STD_ReturnStatus ret = E_OK;
+	STD_ReturnStatus ret = E_NOT_OK;
+	*Key_pressed=KEY_NOT_PRESSED;
 	uint8 l_rows_counter=ZERO_INIT,l_columns_counter=ZERO_INIT,l_counter=ZERO_INIT;
 	uint8 column_logic=ZERO_INIT;
 	if((NULL==_keypad_obj)||(NULL==value))
@@ -69,17 +78,19 @@ STD_ReturnStatus keypad_get_value(const keypad_t *_keypad_obj,uint8 *value)
 					}
 			//ba3d ma khalet kolo zero, hakhaly wahd wahd be 5 volt bel tarteeb 3shan keda akhat l_rows_counter fel loop el bara
 			ret = gpio_pin_write_logic(&(_keypad_obj->keypad_row_pins[l_rows_counter]),GPIO_HIGH);
-			_delay_ms(10);
+			_delay_ms(1);
 			//columns Check
 			for(l_columns_counter=ZERO_INIT;l_columns_counter<ECU_KEYPAD_COLUMNS;l_columns_counter++)
 			{
 				ret = gpio_pin_read_logic(&(_keypad_obj->keypad_columns_pins[l_columns_counter]),&column_logic);
 				if(GPIO_HIGH==column_logic)
 				{
-					*value=btn_values[l_rows_counter][l_columns_counter];
+					*value=btn_values_int[l_rows_counter][l_columns_counter];
+					*Key_pressed=KEY_PRESSED;
 				}
 			}
 		}
+		ret = E_OK;
 	}
 	return ret;
 }
