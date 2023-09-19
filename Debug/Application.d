@@ -16,7 +16,12 @@ Application.o Application.o: ../Application.c ../Application.h \
   ../ECU_Layer/KEYPAD/../../MCAL_Layer/01-GPIO/MCAL_GPIO.h \
   ../ECU_Layer/LCD/ECU_CHR_LCD.h \
   ../ECU_Layer/LCD/../../MCAL_Layer/01-GPIO/MCAL_GPIO.h \
-  ../ECU_Layer/LCD/ECU_CHR_LCD_CNFG.h
+  ../ECU_Layer/LCD/ECU_CHR_LCD_CNFG.h \
+  ../MCAL_Layer/Interrupt/mcal_external_interrupt.h \
+  ../MCAL_Layer/Interrupt/mcal_interrupt_config.h \
+  ../MCAL_Layer/Interrupt/../01-GPIO/MCAL_GPIO.h \
+  ../MCAL_Layer/Interrupt/../01-GPIO/include/avr/interrupt.h \
+  ../MCAL_Layer/Interrupt/mcal_interrupt_gen_cfg.h
 
 ../Application.h:
 
@@ -63,3 +68,13 @@ Application.o Application.o: ../Application.c ../Application.h \
 ../ECU_Layer/LCD/../../MCAL_Layer/01-GPIO/MCAL_GPIO.h:
 
 ../ECU_Layer/LCD/ECU_CHR_LCD_CNFG.h:
+
+../MCAL_Layer/Interrupt/mcal_external_interrupt.h:
+
+../MCAL_Layer/Interrupt/mcal_interrupt_config.h:
+
+../MCAL_Layer/Interrupt/../01-GPIO/MCAL_GPIO.h:
+
+../MCAL_Layer/Interrupt/../01-GPIO/include/avr/interrupt.h:
+
+../MCAL_Layer/Interrupt/mcal_interrupt_gen_cfg.h:
