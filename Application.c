@@ -11,6 +11,9 @@ STD_ReturnStatus ret;
 
 uint16 adc_res_1=0;
 uint16 adc_res_2=0;
+uint16 lm_35=0;
+uint8 Res_vol1=0;
+uint8 Res_vol2=0;
 volatile uint8 adc_flag;
 uint8 adc_req=0;
 
@@ -33,10 +36,9 @@ int main()
 	//lcd_4bit_send_string_pos(&lcd1,1,1,"Hello");
 	while(1)
 	{
-		ret = ADC_GetConversion_Blocking(&adc1,ADC_CHANNEL_AN0,&adc_res_1);
-		ret = ADC_GetConversion_Blocking(&adc1,ADC_CHANNEL_AN1,&adc_res_2);
-		lcd_4bit_send_int_pos(&lcd1,2,1,(uint32)adc_res_2);
-		lcd_4bit_send_int_pos(&lcd1,1,1,(uint32)adc_res_1);
+		ret = ADC_GetConversion_Blocking(&adc1,ADC_CHANNEL_AN2,&lm_35);
+		lm_35=(lm_35*4.88)/10;
+		lcd_4bit_send_int_pos(&lcd1,1,1,(uint32)lm_35);
 	}
 
 }
