@@ -23,3 +23,8 @@ ISR(INT2_vect)
 {
 	INT2_ISR();
 }
+
+ISR(ADC_vect)
+{
+	ADC_ISR();
+}

@@ -30,5 +30,7 @@ ECU_Layer/LED \
 ECU_Layer/PUSH_BUTTON \
 ECU_Layer/RELAY \
 MCAL_Layer/01-GPIO \
+MCAL_Layer/03-EEPROM \
+MCAL_Layer/04-ADC \
 MCAL_Layer/Interrupt \
 

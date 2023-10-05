@@ -21,7 +21,13 @@ Application.o Application.o: ../Application.c ../Application.h \
   ../MCAL_Layer/Interrupt/mcal_interrupt_config.h \
   ../MCAL_Layer/Interrupt/../01-GPIO/MCAL_GPIO.h \
   ../MCAL_Layer/Interrupt/../01-GPIO/include/avr/interrupt.h \
-  ../MCAL_Layer/Interrupt/mcal_interrupt_gen_cfg.h
+  ../MCAL_Layer/Interrupt/mcal_interrupt_gen_cfg.h \
+  ../MCAL_Layer/01-GPIO/include/avr/eeprom.h \
+  ../MCAL_Layer/04-ADC/MCAL_ADC.h \
+  ../MCAL_Layer/04-ADC/../01-GPIO/MCAL_GPIO.h \
+  ../MCAL_Layer/04-ADC/MCAL_ADC_cfg.h \
+  ../MCAL_Layer/04-ADC/../Interrupt/mcal_internal_interrupt.h \
+  ../MCAL_Layer/04-ADC/../Interrupt/mcal_interrupt_config.h
 
 ../Application.h:
 
@@ -78,3 +84,15 @@ Application.o Application.o: ../Application.c ../Application.h \
 ../MCAL_Layer/Interrupt/../01-GPIO/include/avr/interrupt.h:
 
 ../MCAL_Layer/Interrupt/mcal_interrupt_gen_cfg.h:
+
+../MCAL_Layer/01-GPIO/include/avr/eeprom.h:
+
+../MCAL_Layer/04-ADC/MCAL_ADC.h:
+
+../MCAL_Layer/04-ADC/../01-GPIO/MCAL_GPIO.h:
+
+../MCAL_Layer/04-ADC/MCAL_ADC_cfg.h:
+
+../MCAL_Layer/04-ADC/../Interrupt/mcal_internal_interrupt.h:
+
+../MCAL_Layer/04-ADC/../Interrupt/mcal_interrupt_config.h:

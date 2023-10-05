@@ -9,6 +9,8 @@ RM := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include MCAL_Layer/Interrupt/subdir.mk
+-include MCAL_Layer/04-ADC/subdir.mk
+-include MCAL_Layer/03-EEPROM/subdir.mk
 -include MCAL_Layer/01-GPIO/subdir.mk
 -include ECU_Layer/RELAY/subdir.mk
 -include ECU_Layer/PUSH_BUTTON/subdir.mk

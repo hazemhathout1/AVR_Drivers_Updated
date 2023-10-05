@@ -1,15 +1,14 @@
 /*
- * mcal_interrupt_manager.h
+ * MCAL_ADC__cfg.h
  *
- *  Created on: Sep 18, 2023
+ *  Created on: Sep 21, 2023
  *      Author: hazem
  */
 
-#ifndef MCAL_LAYER_INTERRUPT_MCAL_INTERRUPT_MANAGER_H_
-#define MCAL_LAYER_INTERRUPT_MCAL_INTERRUPT_MANAGER_H_
-
+#ifndef MCAL_LAYER_04_ADC_MCAL_ADC_CFG_H_
+#define MCAL_LAYER_04_ADC_MCAL_ADC_CFG_H_
 /*---------------------------INCLUDES------------------------*/
-#include "mcal_interrupt_config.h"
+
 /*------------------------MACRO Declarations----------------*/
 
 
@@ -22,4 +21,4 @@
 /*-----------------------------Software Interfaces Declarations-----------------------*/
 
 
-#endif /* MCAL_LAYER_INTERRUPT_MCAL_INTERRUPT_MANAGER_H_ */
+#endif /* MCAL_LAYER_04_ADC_MCAL_ADC_CFG_H_ */

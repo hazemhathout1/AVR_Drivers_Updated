@@ -9,6 +9,9 @@
 #define APPLICATION_H_
 #include "ECU_Layer/ECU_LAYER_INIT.h"
 #include "MCAL_Layer/Interrupt/mcal_external_interrupt.h"
+//#include "MCAL_Layer/03-EEPROM/MCAL_EEPROM.h"
+#include "MCAL_Layer/01-GPIO/include/avr/eeprom.h"
+#include "MCAL_Layer/04-ADC/MCAL_ADC.h"
 
 
 extern keypad_t keypad1;

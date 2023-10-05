@@ -8,24 +8,9 @@
 #include "ECU_LAYER_INIT.h"
 
 
-led_t led1={
-		.port_name=PORTA_INDEX,
-		.pin=PIN0,
-		.led_status=LED_OFF
-};
-
-led_t led3={
-		.port_name=PORTA_INDEX,
-		.pin=PIN3,
-		.led_status=LED_OFF
-};
 
 
-led_t led2={
-		.port_name=PORTC_INDEX,
-		.pin=PIN0,
-		.led_status=LED_OFF
-};
+
 
 
 keypad_t keypad1={
@@ -137,9 +122,8 @@ chr_lcd_8bit_t lcd2={
 void ecu_layer_initialize()
 {
 	STD_ReturnStatus ret = E_NOT_OK;
-	ret = led_initialize(&led1);
-	ret = led_initialize(&led2);
-	ret = led_initialize(&led3);
+	ret = lcd_4bit_initialize(&lcd1);
+	ret = keypad_initialize(&keypad1);
 }
 
 

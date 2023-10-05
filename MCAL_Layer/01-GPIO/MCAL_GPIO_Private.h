@@ -50,5 +50,34 @@
 #define MCUCSR *((volatile uint8*)0x54)
 #define MCUSR_ISC2 6
 
+//----------------------------------------------------
+/* EEPROM Data Register */
+#define EEDR	_SFR_IO8(0x1D)
+
+/* EEPROM Address Register */
+#define EEAR	_SFR_IO16(0x1E)
+#define EEARL	_SFR_IO8(0x1E)
+#define EEARH	_SFR_IO8(0x1F)
+
+//------------------------------------------------------
+#define ADMUX *((volatile u8*)0x27)
+#define REFS0 6
+#define REFS1 7
+#define ADLAR 5
+
+#define ADCSRA *((volatile u8*)0x26)
+#define ADEN 7
+#define ADSC 6
+#define ADATE 5
+#define ADIF 4
+#define ADIE 3
+#define ADPS0 0
+#define ADPS1 1
+#define ADPS2 2
+
+#define ADCL *((volatile u16*)0x24)
+#define ADCH *((volatile u16*)0x25)
+
+
 
 #endif /* MCAL_LAYER_01_GPIO_MCAL_GPIO_PRIVATE_H_ */

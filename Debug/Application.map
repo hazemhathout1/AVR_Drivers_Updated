@@ -11,17 +11,17 @@ c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy
 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
                               ./MCAL_Layer/Interrupt/mcal_external_interrupt.o (__do_clear_bss)
 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
-                              ./ECU_Layer/LCD/ECU_CHR_LCD.o (__fixunssfsi)
+                              ./MCAL_Layer/03-EEPROM/MCAL_EEPROM.o (__fixunssfsi)
 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
                               c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o) (__subsf3)
 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
-                              ./ECU_Layer/LCD/ECU_CHR_LCD.o (__mulsf3)
+                              ./MCAL_Layer/03-EEPROM/MCAL_EEPROM.o (__mulsf3)
 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
-                              ./ECU_Layer/LCD/ECU_CHR_LCD.o (__gtsf2)
+                              ./MCAL_Layer/03-EEPROM/MCAL_EEPROM.o (__gtsf2)
 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
                               c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o) (__gesf2)
 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
-                              ./ECU_Layer/LCD/ECU_CHR_LCD.o (__ltsf2)
+                              ./MCAL_Layer/03-EEPROM/MCAL_EEPROM.o (__ltsf2)
 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
                               c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o) (__fixsfsi)
 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
@@ -51,6 +51,12 @@ c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib
 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
                               c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(vfprintf_std.o) (__ultoa_invert)
 
+Allocating common symbols
+Common symbol       size              file
+
+adc_flag            0x1               ./Application.o
+ret                 0x1               ./Application.o
+
 Memory Configuration
 
 Name             Origin             Length             Attributes
@@ -68,6 +74,8 @@ LOAD c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../av
 LOAD ./MCAL_Layer/Interrupt/mcal_external_interrupt.o
 LOAD ./MCAL_Layer/Interrupt/mcal_internal_interrupt.o
 LOAD ./MCAL_Layer/Interrupt/mcal_interrupt_manager.o
+LOAD ./MCAL_Layer/04-ADC/MCAL_ADC.o
+LOAD ./MCAL_Layer/03-EEPROM/MCAL_EEPROM.o
 LOAD ./MCAL_Layer/01-GPIO/MCAL_GPIO.o
 LOAD ./ECU_Layer/RELAY/ECU_RELAY.o
 LOAD ./ECU_Layer/PUSH_BUTTON/ECU_PB.o
@@ -172,7 +180,7 @@ LOAD c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x3f70
+.text           0x00000000     0x44ea
  *(.vectors)
  .vectors       0x00000000       0x54 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
                 0x00000000                __vectors
@@ -243,12 +251,13 @@ LOAD c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
                 0x0000008e                __vector_8
                 0x0000008e                __vector_14
                 0x0000008e                __vector_10
-                0x0000008e                __vector_16
                 0x0000008e                __vector_18
                 0x0000008e                __vector_20
  .text          0x00000092        0x0 ./MCAL_Layer/Interrupt/mcal_external_interrupt.o
  .text          0x00000092        0x0 ./MCAL_Layer/Interrupt/mcal_internal_interrupt.o
  .text          0x00000092        0x0 ./MCAL_Layer/Interrupt/mcal_interrupt_manager.o
+ .text          0x00000092        0x0 ./MCAL_Layer/04-ADC/MCAL_ADC.o
+ .text          0x00000092        0x0 ./MCAL_Layer/03-EEPROM/MCAL_EEPROM.o
  .text          0x00000092        0x0 ./MCAL_Layer/01-GPIO/MCAL_GPIO.o
  .text          0x00000092        0x0 ./ECU_Layer/RELAY/ECU_RELAY.o
  .text          0x00000092        0x0 ./ECU_Layer/PUSH_BUTTON/ECU_PB.o
@@ -339,214 +348,250 @@ LOAD c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  .text.__vector_3
                 0x000011ba       0x54 ./MCAL_Layer/Interrupt/mcal_interrupt_manager.o
                 0x000011ba                __vector_3
+ .text.__vector_16
+                0x0000120e       0x54 ./MCAL_Layer/Interrupt/mcal_interrupt_manager.o
+                0x0000120e                __vector_16
+ .text.ADC_Init
+                0x00001262       0xde ./MCAL_Layer/04-ADC/MCAL_ADC.o
+                0x00001262                ADC_Init
+ .text.ADC_DeInit
+                0x00001340       0x48 ./MCAL_Layer/04-ADC/MCAL_ADC.o
+                0x00001340                ADC_DeInit
+ .text.ADC_SelectChannel
+                0x00001388       0x54 ./MCAL_Layer/04-ADC/MCAL_ADC.o
+                0x00001388                ADC_SelectChannel
+ .text.ADC_StartConversion
+                0x000013dc       0x3a ./MCAL_Layer/04-ADC/MCAL_ADC.o
+                0x000013dc                ADC_StartConversion
+ .text.ADC_IsConversionDone
+                0x00001416       0x68 ./MCAL_Layer/04-ADC/MCAL_ADC.o
+                0x00001416                ADC_IsConversionDone
+ .text.ADC_GetConversionResult
+                0x0000147e       0xd0 ./MCAL_Layer/04-ADC/MCAL_ADC.o
+                0x0000147e                ADC_GetConversionResult
+ .text.ADC_GetConversion_Blocking
+                0x0000154e       0x68 ./MCAL_Layer/04-ADC/MCAL_ADC.o
+                0x0000154e                ADC_GetConversion_Blocking
+ .text.adc_input_channel_port_configure
+                0x000015b6      0x100 ./MCAL_Layer/04-ADC/MCAL_ADC.o
+ .text.select_result_format
+                0x000016b6       0x4e ./MCAL_Layer/04-ADC/MCAL_ADC.o
+ .text.ADC_StartConversion_Interrupt
+                0x00001704       0x46 ./MCAL_Layer/04-ADC/MCAL_ADC.o
+                0x00001704                ADC_StartConversion_Interrupt
+ .text.ADC_ISR  0x0000174a       0x32 ./MCAL_Layer/04-ADC/MCAL_ADC.o
+                0x0000174a                ADC_ISR
+ .text.Data_EEPROM_WriteByte
+                0x0000177c      0x158 ./MCAL_Layer/03-EEPROM/MCAL_EEPROM.o
+                0x0000177c                Data_EEPROM_WriteByte
+ .text.Data_EEPROM_ReadByte
+                0x000018d4       0x34 ./MCAL_Layer/03-EEPROM/MCAL_EEPROM.o
+                0x000018d4                Data_EEPROM_ReadByte
  .text.gpio_pin_direction_initialize
-                0x0000120e      0x134 ./MCAL_Layer/01-GPIO/MCAL_GPIO.o
-                0x0000120e                gpio_pin_direction_initialize
+                0x00001908      0x134 ./MCAL_Layer/01-GPIO/MCAL_GPIO.o
+                0x00001908                gpio_pin_direction_initialize
  .text.gpio_pin_get_direction_status
-                0x00001342       0xa4 ./MCAL_Layer/01-GPIO/MCAL_GPIO.o
-                0x00001342                gpio_pin_get_direction_status
+                0x00001a3c       0xa4 ./MCAL_Layer/01-GPIO/MCAL_GPIO.o
+                0x00001a3c                gpio_pin_get_direction_status
  .text.gpio_pin_write_logic
-                0x000013e6      0x12c ./MCAL_Layer/01-GPIO/MCAL_GPIO.o
-                0x000013e6                gpio_pin_write_logic
+                0x00001ae0      0x12c ./MCAL_Layer/01-GPIO/MCAL_GPIO.o
+                0x00001ae0                gpio_pin_write_logic
  .text.gpio_pin_read_logic
-                0x00001512       0x9e ./MCAL_Layer/01-GPIO/MCAL_GPIO.o
-                0x00001512                gpio_pin_read_logic
+                0x00001c0c       0x9e ./MCAL_Layer/01-GPIO/MCAL_GPIO.o
+                0x00001c0c                gpio_pin_read_logic
  .text.gpio_pin_toggle_logic
-                0x000015b0       0xa2 ./MCAL_Layer/01-GPIO/MCAL_GPIO.o
-                0x000015b0                gpio_pin_toggle_logic
+                0x00001caa       0xa2 ./MCAL_Layer/01-GPIO/MCAL_GPIO.o
+                0x00001caa                gpio_pin_toggle_logic
  .text.gpio_pin_initialize
-                0x00001652       0x56 ./MCAL_Layer/01-GPIO/MCAL_GPIO.o
-                0x00001652                gpio_pin_initialize
+                0x00001d4c       0x56 ./MCAL_Layer/01-GPIO/MCAL_GPIO.o
+                0x00001d4c                gpio_pin_initialize
  .text.gpio_port_direction_initialize
-                0x000016a8       0x46 ./MCAL_Layer/01-GPIO/MCAL_GPIO.o
-                0x000016a8                gpio_port_direction_initialize
+                0x00001da2       0x46 ./MCAL_Layer/01-GPIO/MCAL_GPIO.o
+                0x00001da2                gpio_port_direction_initialize
  .text.gpio_port_get_direction_status
-                0x000016ee       0x56 ./MCAL_Layer/01-GPIO/MCAL_GPIO.o
-                0x000016ee                gpio_port_get_direction_status
+                0x00001de8       0x56 ./MCAL_Layer/01-GPIO/MCAL_GPIO.o
+                0x00001de8                gpio_port_get_direction_status
  .text.gpio_port_write_logic
-                0x00001744       0x46 ./MCAL_Layer/01-GPIO/MCAL_GPIO.o
-                0x00001744                gpio_port_write_logic
+                0x00001e3e       0x46 ./MCAL_Layer/01-GPIO/MCAL_GPIO.o
+                0x00001e3e                gpio_port_write_logic
  .text.gpio_port_read_logic
-                0x0000178a       0x56 ./MCAL_Layer/01-GPIO/MCAL_GPIO.o
-                0x0000178a                gpio_port_read_logic
+                0x00001e84       0x56 ./MCAL_Layer/01-GPIO/MCAL_GPIO.o
+                0x00001e84                gpio_port_read_logic
  .text.gpio_port_toggle_logic
-                0x000017e0       0x56 ./MCAL_Layer/01-GPIO/MCAL_GPIO.o
-                0x000017e0                gpio_port_toggle_logic
+                0x00001eda       0x56 ./MCAL_Layer/01-GPIO/MCAL_GPIO.o
+                0x00001eda                gpio_port_toggle_logic
  .text.relay_initialize
-                0x00001836       0x98 ./ECU_Layer/RELAY/ECU_RELAY.o
-                0x00001836                relay_initialize
+                0x00001f30       0x98 ./ECU_Layer/RELAY/ECU_RELAY.o
+                0x00001f30                relay_initialize
  .text.relay_turn_on
-                0x000018ce       0x9a ./ECU_Layer/RELAY/ECU_RELAY.o
-                0x000018ce                relay_turn_on
+                0x00001fc8       0x9a ./ECU_Layer/RELAY/ECU_RELAY.o
+                0x00001fc8                relay_turn_on
  .text.relay_turn_off
-                0x00001968       0x9a ./ECU_Layer/RELAY/ECU_RELAY.o
-                0x00001968                relay_turn_off
+                0x00002062       0x9a ./ECU_Layer/RELAY/ECU_RELAY.o
+                0x00002062                relay_turn_off
  .text.relay_toggle
-                0x00001a02       0x98 ./ECU_Layer/RELAY/ECU_RELAY.o
-                0x00001a02                relay_toggle
+                0x000020fc       0x98 ./ECU_Layer/RELAY/ECU_RELAY.o
+                0x000020fc                relay_toggle
  .text.button_initialize
-                0x00001a9a       0x38 ./ECU_Layer/PUSH_BUTTON/ECU_PB.o
-                0x00001a9a                button_initialize
+                0x00002194       0x38 ./ECU_Layer/PUSH_BUTTON/ECU_PB.o
+                0x00002194                button_initialize
  .text.button_read_state
-                0x00001ad2       0x98 ./ECU_Layer/PUSH_BUTTON/ECU_PB.o
-                0x00001ad2                button_read_state
+                0x000021cc       0x98 ./ECU_Layer/PUSH_BUTTON/ECU_PB.o
+                0x000021cc                button_read_state
  .text.led_initialize
-                0x00001b6a       0x9e ./ECU_Layer/LED/ECU_LED.o
-                0x00001b6a                led_initialize
+                0x00002264       0x9e ./ECU_Layer/LED/ECU_LED.o
+                0x00002264                led_initialize
  .text.led_turn_on
-                0x00001c08       0xa0 ./ECU_Layer/LED/ECU_LED.o
-                0x00001c08                led_turn_on
+                0x00002302       0xa0 ./ECU_Layer/LED/ECU_LED.o
+                0x00002302                led_turn_on
  .text.led_turn_off
-                0x00001ca8       0xa0 ./ECU_Layer/LED/ECU_LED.o
-                0x00001ca8                led_turn_off
+                0x000023a2       0xa0 ./ECU_Layer/LED/ECU_LED.o
+                0x000023a2                led_turn_off
  .text.led_turn_toggle
-                0x00001d48       0x9e ./ECU_Layer/LED/ECU_LED.o
-                0x00001d48                led_turn_toggle
+                0x00002442       0x9e ./ECU_Layer/LED/ECU_LED.o
+                0x00002442                led_turn_toggle
  .text.lcd_4bit_initialize
-                0x00001de6      0x2b6 ./ECU_Layer/LCD/ECU_CHR_LCD.o
-                0x00001de6                lcd_4bit_initialize
+                0x000024e0      0x2b6 ./ECU_Layer/LCD/ECU_CHR_LCD.o
+                0x000024e0                lcd_4bit_initialize
  .text.lcd_4bit_send_command
-                0x0000209c       0x72 ./ECU_Layer/LCD/ECU_CHR_LCD.o
-                0x0000209c                lcd_4bit_send_command
+                0x00002796       0x72 ./ECU_Layer/LCD/ECU_CHR_LCD.o
+                0x00002796                lcd_4bit_send_command
  .text.lcd_4bit_send_char_data
-                0x0000210e       0x72 ./ECU_Layer/LCD/ECU_CHR_LCD.o
-                0x0000210e                lcd_4bit_send_char_data
+                0x00002808       0x72 ./ECU_Layer/LCD/ECU_CHR_LCD.o
+                0x00002808                lcd_4bit_send_char_data
  .text.lcd_4bit_send_char_data_pos
-                0x00002180       0x52 ./ECU_Layer/LCD/ECU_CHR_LCD.o
-                0x00002180                lcd_4bit_send_char_data_pos
+                0x0000287a       0x52 ./ECU_Layer/LCD/ECU_CHR_LCD.o
+                0x0000287a                lcd_4bit_send_char_data_pos
  .text.lcd_4bit_send_string
-                0x000021d2       0x66 ./ECU_Layer/LCD/ECU_CHR_LCD.o
-                0x000021d2                lcd_4bit_send_string
+                0x000028cc       0x66 ./ECU_Layer/LCD/ECU_CHR_LCD.o
+                0x000028cc                lcd_4bit_send_string
  .text.lcd_4bit_send_string_pos
-                0x00002238       0x82 ./ECU_Layer/LCD/ECU_CHR_LCD.o
-                0x00002238                lcd_4bit_send_string_pos
+                0x00002932       0x82 ./ECU_Layer/LCD/ECU_CHR_LCD.o
+                0x00002932                lcd_4bit_send_string_pos
  .text.lcd_4bit_send_custom_char
-                0x000022ba       0xac ./ECU_Layer/LCD/ECU_CHR_LCD.o
-                0x000022ba                lcd_4bit_send_custom_char
+                0x000029b4       0xac ./ECU_Layer/LCD/ECU_CHR_LCD.o
+                0x000029b4                lcd_4bit_send_custom_char
  .text.lcd_4bit_send_int
-                0x00002366       0x56 ./ECU_Layer/LCD/ECU_CHR_LCD.o
-                0x00002366                lcd_4bit_send_int
+                0x00002a60       0x56 ./ECU_Layer/LCD/ECU_CHR_LCD.o
+                0x00002a60                lcd_4bit_send_int
  .text.lcd_4bit_send_int_pos
-                0x000023bc       0x7e ./ECU_Layer/LCD/ECU_CHR_LCD.o
-                0x000023bc                lcd_4bit_send_int_pos
+                0x00002ab6       0x7e ./ECU_Layer/LCD/ECU_CHR_LCD.o
+                0x00002ab6                lcd_4bit_send_int_pos
  .text.lcd_8bit_initialize
-                0x0000243a      0x43c ./ECU_Layer/LCD/ECU_CHR_LCD.o
-                0x0000243a                lcd_8bit_initialize
+                0x00002b34      0x43c ./ECU_Layer/LCD/ECU_CHR_LCD.o
+                0x00002b34                lcd_8bit_initialize
  .text.lcd_8bit_send_command
-                0x00002876       0x9c ./ECU_Layer/LCD/ECU_CHR_LCD.o
-                0x00002876                lcd_8bit_send_command
+                0x00002f70       0x9c ./ECU_Layer/LCD/ECU_CHR_LCD.o
+                0x00002f70                lcd_8bit_send_command
  .text.lcd_8bit_send_char_data
-                0x00002912       0x9c ./ECU_Layer/LCD/ECU_CHR_LCD.o
-                0x00002912                lcd_8bit_send_char_data
+                0x0000300c       0x9c ./ECU_Layer/LCD/ECU_CHR_LCD.o
+                0x0000300c                lcd_8bit_send_char_data
  .text.lcd_8bit_send_char_data_pos
-                0x000029ae       0x54 ./ECU_Layer/LCD/ECU_CHR_LCD.o
-                0x000029ae                lcd_8bit_send_char_data_pos
+                0x000030a8       0x54 ./ECU_Layer/LCD/ECU_CHR_LCD.o
+                0x000030a8                lcd_8bit_send_char_data_pos
  .text.lcd_8bit_send_string
-                0x00002a02       0x66 ./ECU_Layer/LCD/ECU_CHR_LCD.o
-                0x00002a02                lcd_8bit_send_string
+                0x000030fc       0x66 ./ECU_Layer/LCD/ECU_CHR_LCD.o
+                0x000030fc                lcd_8bit_send_string
  .text.lcd_8bit_send_string_pos
-                0x00002a68       0x82 ./ECU_Layer/LCD/ECU_CHR_LCD.o
-                0x00002a68                lcd_8bit_send_string_pos
+                0x00003162       0x82 ./ECU_Layer/LCD/ECU_CHR_LCD.o
+                0x00003162                lcd_8bit_send_string_pos
  .text.lcd_8bit_send_custom_char
-                0x00002aea       0xac ./ECU_Layer/LCD/ECU_CHR_LCD.o
-                0x00002aea                lcd_8bit_send_custom_char
+                0x000031e4       0xac ./ECU_Layer/LCD/ECU_CHR_LCD.o
+                0x000031e4                lcd_8bit_send_custom_char
  .text.convert_byte_to_string
-                0x00002b96       0x7c ./ECU_Layer/LCD/ECU_CHR_LCD.o
-                0x00002b96                convert_byte_to_string
+                0x00003290       0x7c ./ECU_Layer/LCD/ECU_CHR_LCD.o
+                0x00003290                convert_byte_to_string
  .text.convert_string_to_byte
-                0x00002c12       0xa4 ./ECU_Layer/LCD/ECU_CHR_LCD.o
-                0x00002c12                convert_string_to_byte
+                0x0000330c       0xa4 ./ECU_Layer/LCD/ECU_CHR_LCD.o
+                0x0000330c                convert_string_to_byte
  .text.convert_short_to_string
-                0x00002cb6       0x80 ./ECU_Layer/LCD/ECU_CHR_LCD.o
-                0x00002cb6                convert_short_to_string
+                0x000033b0       0x80 ./ECU_Layer/LCD/ECU_CHR_LCD.o
+                0x000033b0                convert_short_to_string
  .text.convert_int_to_string
-                0x00002d36       0x80 ./ECU_Layer/LCD/ECU_CHR_LCD.o
-                0x00002d36                convert_int_to_string
+                0x00003430       0x80 ./ECU_Layer/LCD/ECU_CHR_LCD.o
+                0x00003430                convert_int_to_string
  .text.lcd_send_4bits
-                0x00002db6       0x9a ./ECU_Layer/LCD/ECU_CHR_LCD.o
+                0x000034b0       0x9a ./ECU_Layer/LCD/ECU_CHR_LCD.o
  .text.lcd_4bit_send_enable
-                0x00002e50      0x130 ./ECU_Layer/LCD/ECU_CHR_LCD.o
+                0x0000354a      0x130 ./ECU_Layer/LCD/ECU_CHR_LCD.o
  .text.lcd_8bit_send_enable
-                0x00002f80      0x130 ./ECU_Layer/LCD/ECU_CHR_LCD.o
+                0x0000367a      0x130 ./ECU_Layer/LCD/ECU_CHR_LCD.o
  .text.lcd_8bit_set_cursor
-                0x000030b0       0x80 ./ECU_Layer/LCD/ECU_CHR_LCD.o
+                0x000037aa       0x80 ./ECU_Layer/LCD/ECU_CHR_LCD.o
  .text.lcd_4bit_set_cursor
-                0x00003130       0x80 ./ECU_Layer/LCD/ECU_CHR_LCD.o
+                0x0000382a       0x80 ./ECU_Layer/LCD/ECU_CHR_LCD.o
  .text.keypad_initialize
-                0x000031b0       0x86 ./ECU_Layer/KEYPAD/ECU_KEYPAD.o
-                0x000031b0                keypad_initialize
+                0x000038aa       0x86 ./ECU_Layer/KEYPAD/ECU_KEYPAD.o
+                0x000038aa                keypad_initialize
  .text.keypad_get_value
-                0x00003236      0x1f6 ./ECU_Layer/KEYPAD/ECU_KEYPAD.o
-                0x00003236                keypad_get_value
+                0x00003930      0x1f6 ./ECU_Layer/KEYPAD/ECU_KEYPAD.o
+                0x00003930                keypad_get_value
  .text.seven_segment_initialize
-                0x0000342c       0x72 ./ECU_Layer/ECU_SEVEN_SEG/ECU_SEVEN_SEG.o
-                0x0000342c                seven_segment_initialize
+                0x00003b26       0x72 ./ECU_Layer/ECU_SEVEN_SEG/ECU_SEVEN_SEG.o
+                0x00003b26                seven_segment_initialize
  .text.seven_segment_write_number
-                0x0000349e      0x14c ./ECU_Layer/ECU_SEVEN_SEG/ECU_SEVEN_SEG.o
-                0x0000349e                seven_segment_write_number
+                0x00003b98      0x14c ./ECU_Layer/ECU_SEVEN_SEG/ECU_SEVEN_SEG.o
+                0x00003b98                seven_segment_write_number
  .text.dc_motor_initialize
-                0x000035ea       0x40 ./ECU_Layer/DC_Motor/ECU_DC_Motor.o
-                0x000035ea                dc_motor_initialize
+                0x00003ce4       0x40 ./ECU_Layer/DC_Motor/ECU_DC_Motor.o
+                0x00003ce4                dc_motor_initialize
  .text.dc_motor_move_right
-                0x0000362a       0x44 ./ECU_Layer/DC_Motor/ECU_DC_Motor.o
-                0x0000362a                dc_motor_move_right
+                0x00003d24       0x44 ./ECU_Layer/DC_Motor/ECU_DC_Motor.o
+                0x00003d24                dc_motor_move_right
  .text.dc_motor_move_left
-                0x0000366e       0x44 ./ECU_Layer/DC_Motor/ECU_DC_Motor.o
-                0x0000366e                dc_motor_move_left
+                0x00003d68       0x44 ./ECU_Layer/DC_Motor/ECU_DC_Motor.o
+                0x00003d68                dc_motor_move_left
  .text.dc_motor_stop
-                0x000036b2       0x44 ./ECU_Layer/DC_Motor/ECU_DC_Motor.o
-                0x000036b2                dc_motor_stop
+                0x00003dac       0x44 ./ECU_Layer/DC_Motor/ECU_DC_Motor.o
+                0x00003dac                dc_motor_stop
  .text.ecu_layer_initialize
-                0x000036f6       0x32 ./ECU_Layer/ECU_LAYER_INIT.o
-                0x000036f6                ecu_layer_initialize
- .text.main     0x00003728      0x208 ./Application.o
-                0x00003728                main
+                0x00003df0       0x28 ./ECU_Layer/ECU_LAYER_INIT.o
+                0x00003df0                ecu_layer_initialize
+ .text.main     0x00003e18       0x64 ./Application.o
+                0x00003e18                main
  .text.Application_initialize
-                0x00003930       0x12 ./Application.o
-                0x00003930                Application_initialize
- .text.int0_App_ISR
-                0x00003942       0x16 ./Application.o
-                0x00003942                int0_App_ISR
- .text.int1_App_ISR
-                0x00003958       0x16 ./Application.o
-                0x00003958                int1_App_ISR
- .text.libgcc   0x0000396e       0x18 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
-                0x0000396e                __udivmodqi4
- .text.libgcc   0x00003986       0x28 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
-                0x00003986                __udivmodhi4
- .text.libgcc   0x000039ae        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x000039ae        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .text.libgcc   0x000039ae        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .text.libgcc   0x000039ae       0x38 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
-                0x000039ae                __prologue_saves__
- .text.libgcc   0x000039e6       0x36 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
-                0x000039e6                __epilogue_restores__
+                0x00003e7c       0x1e ./Application.o
+                0x00003e7c                Application_initialize
+ .text.ADC_DefaulInterruptHandler
+                0x00003e9a       0x4e ./Application.o
+                0x00003e9a                ADC_DefaulInterruptHandler
+ .text.libgcc   0x00003ee8       0x18 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
+                0x00003ee8                __udivmodqi4
+ .text.libgcc   0x00003f00       0x28 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                0x00003f00                __udivmodhi4
+ .text.libgcc   0x00003f28        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00003f28        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00003f28        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00003f28       0x38 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+                0x00003f28                __prologue_saves__
+ .text.libgcc   0x00003f60       0x36 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+                0x00003f60                __epilogue_restores__
  .text.avr-libc
-                0x00003a1c        0xe c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memset.o)
-                0x00003a1c                memset
+                0x00003f96        0xe c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memset.o)
+                0x00003f96                memset
  .text.avr-libc
-                0x00003a2a       0x48 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(sprintf.o)
-                0x00003a2a                sprintf
+                0x00003fa4       0x48 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(sprintf.o)
+                0x00003fa4                sprintf
  .text.avr-libc
-                0x00003a72      0x3ba c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
-                0x00003a72                vfprintf
+                0x00003fec      0x3ba c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
+                0x00003fec                vfprintf
  .text.avr-libc
-                0x00003e2c       0x16 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
-                0x00003e2c                strnlen_P
+                0x000043a6       0x16 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
+                0x000043a6                strnlen_P
  .text.avr-libc
-                0x00003e42       0x16 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen.o)
-                0x00003e42                strnlen
+                0x000043bc       0x16 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen.o)
+                0x000043bc                strnlen
  .text.avr-libc
-                0x00003e58       0x58 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fputc.o)
-                0x00003e58                fputc
+                0x000043d2       0x58 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fputc.o)
+                0x000043d2                fputc
  .text.avr-libc
-                0x00003eb0       0xbc c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
-                0x00003eb0                __ultoa_invert
-                0x00003f6c                . = ALIGN (0x2)
+                0x0000442a       0xbc c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
+                0x0000442a                __ultoa_invert
+                0x000044e6                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00003f6c        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x00003f6c                exit
-                0x00003f6c                _exit
+ .fini9         0x000044e6        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x000044e6                exit
+                0x000044e6                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -565,17 +610,19 @@ LOAD c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00003f6c        0x4 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x000044e6        0x4 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00003f70                _etext = .
+                0x000044ea                _etext = .
 
-.data           0x00800060       0x86 load address 0x00003f70
+.data           0x00800060       0x7e load address 0x000044ea
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
  .data          0x00800060        0x0 ./MCAL_Layer/Interrupt/mcal_external_interrupt.o
  .data          0x00800060        0x0 ./MCAL_Layer/Interrupt/mcal_internal_interrupt.o
  .data          0x00800060        0x0 ./MCAL_Layer/Interrupt/mcal_interrupt_manager.o
+ .data          0x00800060        0x0 ./MCAL_Layer/04-ADC/MCAL_ADC.o
+ .data          0x00800060        0x0 ./MCAL_Layer/03-EEPROM/MCAL_EEPROM.o
  .data          0x00800060        0x0 ./MCAL_Layer/01-GPIO/MCAL_GPIO.o
  .data          0x00800060        0x0 ./ECU_Layer/RELAY/ECU_RELAY.o
  .data          0x00800060        0x0 ./ECU_Layer/PUSH_BUTTON/ECU_PB.o
@@ -626,95 +673,99 @@ LOAD c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
                 0x00800083        0xa ./ECU_Layer/ECU_SEVEN_SEG/ECU_SEVEN_SEG.o
  .data.CommCathArr
                 0x0080008d        0xa ./ECU_Layer/ECU_LAYER_INIT.o
- .data.led3     0x00800097        0x1 ./ECU_Layer/ECU_LAYER_INIT.o
-                0x00800097                led3
- .data.led2     0x00800098        0x1 ./ECU_Layer/ECU_LAYER_INIT.o
-                0x00800098                led2
- .data.keypad1  0x00800099        0x8 ./ECU_Layer/ECU_LAYER_INIT.o
-                0x00800099                keypad1
- .data.lcd1     0x008000a1        0x6 ./ECU_Layer/ECU_LAYER_INIT.o
-                0x008000a1                lcd1
- .data.lcd2     0x008000a7        0xa ./ECU_Layer/ECU_LAYER_INIT.o
-                0x008000a7                lcd2
+ .data.keypad1  0x00800097        0x8 ./ECU_Layer/ECU_LAYER_INIT.o
+                0x00800097                keypad1
+ .data.lcd1     0x0080009f        0x6 ./ECU_Layer/ECU_LAYER_INIT.o
+                0x0080009f                lcd1
+ .data.lcd2     0x008000a5        0xa ./ECU_Layer/ECU_LAYER_INIT.o
+                0x008000a5                lcd2
  .data.CommCathArr
-                0x008000b1        0xa ./Application.o
- .data.int0_obj
-                0x008000bb        0x5 ./Application.o
-                0x008000bb                int0_obj
- .data.int1_obj
-                0x008000c0        0x5 ./Application.o
-                0x008000c0                int1_obj
+                0x008000af        0xa ./Application.o
+ .data.adc1     0x008000b9        0x5 ./Application.o
+                0x008000b9                adc1
  *(.rodata)
  *(.rodata*)
  .rodata.btn_values
-                0x008000c5       0x10 ./ECU_Layer/KEYPAD/ECU_KEYPAD.o
+                0x008000be       0x10 ./ECU_Layer/KEYPAD/ECU_KEYPAD.o
  .rodata.btn_values_int
-                0x008000d5       0x10 ./ECU_Layer/KEYPAD/ECU_KEYPAD.o
+                0x008000ce       0x10 ./ECU_Layer/KEYPAD/ECU_KEYPAD.o
  *(.gnu.linkonce.d*)
-                0x008000e6                . = ALIGN (0x2)
- *fill*         0x008000e5        0x1 00
-                0x008000e6                _edata = .
-                0x008000e6                PROVIDE (__data_end, .)
+                0x008000de                . = ALIGN (0x2)
+                0x008000de                _edata = .
+                0x008000de                PROVIDE (__data_end, .)
 
-.bss            0x008000e6        0x9
-                0x008000e6                PROVIDE (__bss_start, .)
+.bss            0x008000de       0x11
+                0x008000de                PROVIDE (__bss_start, .)
  *(.bss)
- .bss           0x008000e6        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
- .bss           0x008000e6        0x0 ./MCAL_Layer/Interrupt/mcal_external_interrupt.o
- .bss           0x008000e6        0x0 ./MCAL_Layer/Interrupt/mcal_internal_interrupt.o
- .bss           0x008000e6        0x0 ./MCAL_Layer/Interrupt/mcal_interrupt_manager.o
- .bss           0x008000e6        0x0 ./MCAL_Layer/01-GPIO/MCAL_GPIO.o
- .bss           0x008000e6        0x0 ./ECU_Layer/RELAY/ECU_RELAY.o
- .bss           0x008000e6        0x0 ./ECU_Layer/PUSH_BUTTON/ECU_PB.o
- .bss           0x008000e6        0x0 ./ECU_Layer/LED/ECU_LED.o
- .bss           0x008000e6        0x0 ./ECU_Layer/LCD/ECU_CHR_LCD.o
- .bss           0x008000e6        0x0 ./ECU_Layer/KEYPAD/ECU_KEYPAD.o
- .bss           0x008000e6        0x0 ./ECU_Layer/ECU_SEVEN_SEG/ECU_SEVEN_SEG.o
- .bss           0x008000e6        0x0 ./ECU_Layer/DC_Motor/ECU_DC_Motor.o
- .bss           0x008000e6        0x0 ./ECU_Layer/ECU_LAYER_INIT.o
- .bss           0x008000e6        0x0 ./Application.o
- .bss           0x008000e6        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
- .bss           0x008000e6        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
- .bss           0x008000e6        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .bss           0x008000e6        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .bss           0x008000e6        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .bss           0x008000e6        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
- .bss           0x008000e6        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
- .bss           0x008000e6        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
- .bss           0x008000e6        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
- .bss           0x008000e6        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
- .bss           0x008000e6        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
- .bss           0x008000e6        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
- .bss           0x008000e6        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
- .bss           0x008000e6        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
- .bss           0x008000e6        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
- .bss           0x008000e6        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
- .bss           0x008000e6        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
- .bss           0x008000e6        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
- .bss           0x008000e6        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memset.o)
- .bss           0x008000e6        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(sprintf.o)
- .bss           0x008000e6        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
- .bss           0x008000e6        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
- .bss           0x008000e6        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen.o)
- .bss           0x008000e6        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fputc.o)
- .bss           0x008000e6        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
+ .bss           0x008000de        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .bss           0x008000de        0x0 ./MCAL_Layer/Interrupt/mcal_external_interrupt.o
+ .bss           0x008000de        0x0 ./MCAL_Layer/Interrupt/mcal_internal_interrupt.o
+ .bss           0x008000de        0x0 ./MCAL_Layer/Interrupt/mcal_interrupt_manager.o
+ .bss           0x008000de        0x0 ./MCAL_Layer/04-ADC/MCAL_ADC.o
+ .bss           0x008000de        0x0 ./MCAL_Layer/03-EEPROM/MCAL_EEPROM.o
+ .bss           0x008000de        0x0 ./MCAL_Layer/01-GPIO/MCAL_GPIO.o
+ .bss           0x008000de        0x0 ./ECU_Layer/RELAY/ECU_RELAY.o
+ .bss           0x008000de        0x0 ./ECU_Layer/PUSH_BUTTON/ECU_PB.o
+ .bss           0x008000de        0x0 ./ECU_Layer/LED/ECU_LED.o
+ .bss           0x008000de        0x0 ./ECU_Layer/LCD/ECU_CHR_LCD.o
+ .bss           0x008000de        0x0 ./ECU_Layer/KEYPAD/ECU_KEYPAD.o
+ .bss           0x008000de        0x0 ./ECU_Layer/ECU_SEVEN_SEG/ECU_SEVEN_SEG.o
+ .bss           0x008000de        0x0 ./ECU_Layer/DC_Motor/ECU_DC_Motor.o
+ .bss           0x008000de        0x0 ./ECU_Layer/ECU_LAYER_INIT.o
+ .bss           0x008000de        0x0 ./Application.o
+ .bss           0x008000de        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
+ .bss           0x008000de        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .bss           0x008000de        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x008000de        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .bss           0x008000de        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x008000de        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
+ .bss           0x008000de        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
+ .bss           0x008000de        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
+ .bss           0x008000de        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
+ .bss           0x008000de        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
+ .bss           0x008000de        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
+ .bss           0x008000de        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
+ .bss           0x008000de        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
+ .bss           0x008000de        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+ .bss           0x008000de        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+ .bss           0x008000de        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
+ .bss           0x008000de        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
+ .bss           0x008000de        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
+ .bss           0x008000de        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memset.o)
+ .bss           0x008000de        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(sprintf.o)
+ .bss           0x008000de        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
+ .bss           0x008000de        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
+ .bss           0x008000de        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen.o)
+ .bss           0x008000de        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fputc.o)
+ .bss           0x008000de        0x0 c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
  *(.bss*)
  .bss.INT0_InterruptHandler
-                0x008000e6        0x2 ./MCAL_Layer/Interrupt/mcal_external_interrupt.o
+                0x008000de        0x2 ./MCAL_Layer/Interrupt/mcal_external_interrupt.o
  .bss.INT1_InterruptHandler
-                0x008000e8        0x2 ./MCAL_Layer/Interrupt/mcal_external_interrupt.o
+                0x008000e0        0x2 ./MCAL_Layer/Interrupt/mcal_external_interrupt.o
  .bss.INT2_InterruptHandler
-                0x008000ea        0x2 ./MCAL_Layer/Interrupt/mcal_external_interrupt.o
+                0x008000e2        0x2 ./MCAL_Layer/Interrupt/mcal_external_interrupt.o
+ .bss.ADC_InterruptHandler
+                0x008000e4        0x2 ./MCAL_Layer/04-ADC/MCAL_ADC.o
  .bss.motor_pin1
-                0x008000ec        0x1 ./ECU_Layer/DC_Motor/ECU_DC_Motor.o
+                0x008000e6        0x1 ./ECU_Layer/DC_Motor/ECU_DC_Motor.o
  .bss.motor_pin2
-                0x008000ed        0x1 ./ECU_Layer/DC_Motor/ECU_DC_Motor.o
- .bss.led1      0x008000ee        0x1 ./ECU_Layer/ECU_LAYER_INIT.o
-                0x008000ee                led1
+                0x008000e7        0x1 ./ECU_Layer/DC_Motor/ECU_DC_Motor.o
+ .bss.adc_res_1
+                0x008000e8        0x2 ./Application.o
+                0x008000e8                adc_res_1
+ .bss.adc_res_2
+                0x008000ea        0x2 ./Application.o
+                0x008000ea                adc_res_2
+ .bss.adc_req   0x008000ec        0x1 ./Application.o
+                0x008000ec                adc_req
  *(COMMON)
+ COMMON         0x008000ed        0x2 ./Application.o
+                0x008000ed                adc_flag
+                0x008000ee                ret
                 0x008000ef                PROVIDE (__bss_end, .)
-                0x00003f70                __data_load_start = LOADADDR (.data)
-                0x00003ff6                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x000044ea                __data_load_start = LOADADDR (.data)
+                0x00004568                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x008000ef        0x0
                 0x008000ef                PROVIDE (__noinit_start, .)
@@ -739,37 +790,41 @@ LOAD c:/new folder/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .signature
  *(.signature*)
 
-.stab           0x00000000     0x5bc8
+.stab           0x00000000     0x69d8
  *(.stab)
  .stab          0x00000000      0xe10 ./MCAL_Layer/Interrupt/mcal_external_interrupt.o
  .stab          0x00000e10      0x168 ./MCAL_Layer/Interrupt/mcal_internal_interrupt.o
                                 0x480 (size before relaxing)
- .stab          0x00000f78      0x324 ./MCAL_Layer/Interrupt/mcal_interrupt_manager.o
-                                0x510 (size before relaxing)
- .stab          0x0000129c      0x918 ./MCAL_Layer/01-GPIO/MCAL_GPIO.o
+ .stab          0x00000f78      0x354 ./MCAL_Layer/Interrupt/mcal_interrupt_manager.o
+                                0x540 (size before relaxing)
+ .stab          0x000012cc      0xa14 ./MCAL_Layer/04-ADC/MCAL_ADC.o
+                                0xc00 (size before relaxing)
+ .stab          0x00001ce0      0x4c8 ./MCAL_Layer/03-EEPROM/MCAL_EEPROM.o
+                                0x6b4 (size before relaxing)
+ .stab          0x000021a8      0x918 ./MCAL_Layer/01-GPIO/MCAL_GPIO.o
                                 0xae0 (size before relaxing)
- .stab          0x00001bb4      0x558 ./ECU_Layer/RELAY/ECU_RELAY.o
+ .stab          0x00002ac0      0x558 ./ECU_Layer/RELAY/ECU_RELAY.o
                                 0x720 (size before relaxing)
- .stab          0x0000210c      0x438 ./ECU_Layer/PUSH_BUTTON/ECU_PB.o
+ .stab          0x00003018      0x438 ./ECU_Layer/PUSH_BUTTON/ECU_PB.o
                                 0x600 (size before relaxing)
- .stab          0x00002544      0x570 ./ECU_Layer/LED/ECU_LED.o
+ .stab          0x00003450      0x570 ./ECU_Layer/LED/ECU_LED.o
                                 0x738 (size before relaxing)
- .stab          0x00002ab4     0x1b24 ./ECU_Layer/LCD/ECU_CHR_LCD.o
+ .stab          0x000039c0     0x1b24 ./ECU_Layer/LCD/ECU_CHR_LCD.o
                                0x1cec (size before relaxing)
- .stab          0x000045d8      0x5a0 ./ECU_Layer/KEYPAD/ECU_KEYPAD.o
+ .stab          0x000054e4      0x5a0 ./ECU_Layer/KEYPAD/ECU_KEYPAD.o
                                 0x768 (size before relaxing)
- .stab          0x00004b78      0x438 ./ECU_Layer/ECU_SEVEN_SEG/ECU_SEVEN_SEG.o
+ .stab          0x00005a84      0x438 ./ECU_Layer/ECU_SEVEN_SEG/ECU_SEVEN_SEG.o
                                 0x600 (size before relaxing)
- .stab          0x00004fb0      0x4e0 ./ECU_Layer/DC_Motor/ECU_DC_Motor.o
+ .stab          0x00005ebc      0x4e0 ./ECU_Layer/DC_Motor/ECU_DC_Motor.o
                                 0x6a8 (size before relaxing)
- .stab          0x00005490      0x2c4 ./ECU_Layer/ECU_LAYER_INIT.o
-                                0x648 (size before relaxing)
- .stab          0x00005754      0x474 ./Application.o
-                                0x8f4 (size before relaxing)
+ .stab          0x0000639c      0x294 ./ECU_Layer/ECU_LAYER_INIT.o
+                                0x618 (size before relaxing)
+ .stab          0x00006630      0x3a8 ./Application.o
+                                0x828 (size before relaxing)
 
-.stabstr        0x00000000     0x2f03
+.stabstr        0x00000000     0x39f6
  *(.stabstr)
- .stabstr       0x00000000     0x2f03 ./MCAL_Layer/Interrupt/mcal_external_interrupt.o
+ .stabstr       0x00000000     0x39f6 ./MCAL_Layer/Interrupt/mcal_external_interrupt.o
 
 .stab.excl
  *(.stab.excl)
